@@ -1,0 +1,76 @@
+/* account.css */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; /* Sử dụng min-height để không bị mất chân trang khi form dài */
+    background-color: #f5f5f5; 
+    margin: 0;
+}
+
+.form-container { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    width: 350px; 
+}
+
+h2 { 
+    color: #2e7d32; /* Màu xanh lá của SUDES NEST */
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+input { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+button { 
+    width: 100%; 
+    padding: 12px; 
+    background-color: #2e7d32; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+button:hover { 
+    background-color: #1b5e20; 
+}
+
+.switch { 
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 14px; 
+    color: #666;
+}
+
+.switch a {
+    color: #d32f2f; /* Màu đỏ nổi bật cho link chuyển đổi */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
