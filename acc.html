@@ -9,9 +9,9 @@
 <body>
 
     <div class="form-container">
-        <h2>Đăng nhập</h2>
+        <h2>ĐĂNG NHẬP</h2>
         <input type="email" id="email" placeholder="Email / Số điện thoại">
-        <input type="password" id="password" placeholder="Mật khẩu">
+        <input type="password" id="password" placeholder="Mật khẩu (6-12 ký tự)">
         
         <button type="button" id="loginBtn">ĐĂNG NHẬP</button>
         
@@ -23,23 +23,27 @@
         const emailInput = document.getElementById('email');
         const passInput = document.getElementById('password');
 
-     
         loginBtn.addEventListener('click', function() {
             const emailValue = emailInput.value.trim();
             const passValue = passInput.value.trim();
 
             if (emailValue === "" || passValue === "") {
-                alert("Không để trống thông tin");
+                alert("Không được để trống dữ liệu!");
+                return;
+            }
+            if (passValue.length < 6) {
+                alert("Mật khẩu quá ngắn (dưới 6 ký tự)!");
+                return;
             } 
- 
-            else if (emailValue === "taodangcap@gmail.com" && passValue === "11111") {
-                alert("Đăng nhập thành công");
-    
+            if (passValue.length > 12) {
+                alert("Mật khẩu quá dài (vượt 12 ký tự)!");
+                return;
+            }
+            if (emailValue === "taodangcap@gmail.com" && passValue === "123456") {
+                alert("Đăng nhập thành công!");
                 window.location.href = "index.html";
-            } 
-            else {
-                alert("Sai tài khoản hoặc mật khẩu rồi thằng ngu");
-                passInput.value = ""; 
+            } else {
+                alert("Đăng nhập thất bại!");
             }
         });
     </script>
