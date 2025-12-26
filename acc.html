@@ -10,12 +10,39 @@
 
     <div class="form-container">
         <h2>Đăng nhập</h2>
-        <input type="email" placeholder="Email / Số điện thoại">
-        <input type="password" placeholder="Mật khẩu">
-        <button>ĐĂNG NHẬP</button>
+        <input type="email" id="email" placeholder="Email / Số điện thoại">
+        <input type="password" id="password" placeholder="Mật khẩu">
         
-      <div class="switch">Chưa có tài khoản? <a href="dangki.html">Đăng ký ngay</a></div>
+        <button type="button" id="loginBtn">ĐĂNG NHẬP</button>
+        
+        <div class="switch">Chưa có tài khoản? <a href="dangki.html">Đăng ký ngay</a></div>
     </div>
+
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const emailInput = document.getElementById('email');
+        const passInput = document.getElementById('password');
+
+     
+        loginBtn.addEventListener('click', function() {
+            const emailValue = emailInput.value.trim();
+            const passValue = passInput.value.trim();
+
+            if (emailValue === "" || passValue === "") {
+                alert("Không để trống thông tin");
+            } 
+ 
+            else if (emailValue === "taodangcap@gmail.com" && passValue === "11111") {
+                alert("Đăng nhập thành công");
+    
+                window.location.href = "index.html";
+            } 
+            else {
+                alert("Sai tài khoản hoặc mật khẩu rồi thằng ngu");
+                passInput.value = ""; 
+            }
+        });
+    </script>
 
 </body>
 </html>
