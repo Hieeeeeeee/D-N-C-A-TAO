@@ -285,4 +285,15 @@ header{
       cursor: pointer;
        border: none;
         background: none; 
-        font-size: 20px; }
+        font-size: 20px; 
+    }
+    .crud-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.crud-table th, .crud-table td { border: 1px solid #eee; padding: 10px; text-align: left; }
+.crud-table th { background: #2e7d32; color: white; }
+
+/* FIX CHO ĐIỆN THOẠI */
+@media (max-width: 768px) {
+    .header-top, .header-center, .header-bottom {
+        flex-direction: column; /* Xếp dọc các thành phần */
+        text-align: center;
+    }
