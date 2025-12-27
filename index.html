@@ -169,10 +169,10 @@ function showSlide() {
 
 showSlide();            
 setInterval(showSlide, 3000); 
-// Thay đổi API_URL thành một cái tên để lưu trong bộ nhớ máy tính
+
 const STORAGE_KEY = "SUDES_NEST_PRODUCTS";
 
-// 1. READ: Lấy dữ liệu từ bộ nhớ máy tính
+
 function loadProducts() {
     const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
     const body = document.getElementById('crud-table-body');
@@ -189,9 +189,8 @@ function loadProducts() {
     `).join('');
 }
 
-// 2. CREATE & UPDATE
 function handleSave() {
-    const id = document.getElementById('crud-id').value; // Ở đây id đóng vai trò là index
+    const id = document.getElementById('crud-id').value; 
     const name = document.getElementById('crud-name').value;
     const price = document.getElementById('crud-price').value;
 
@@ -200,10 +199,8 @@ function handleSave() {
     let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 
     if (id !== "") {
-        // Cập nhật (Update)
         products[id] = { name, price };
     } else {
-        // Thêm mới (Create)
         products.push({ name, price });
     }
 
@@ -211,8 +208,6 @@ function handleSave() {
     clearForm();
     loadProducts();
 }
-
-// 3. DELETE
 function deleteProduct(index) {
     if(confirm("Xác nhận xóa sản phẩm này?")) {
         let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
