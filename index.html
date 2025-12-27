@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>b1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sudes Nest - Quản lý sản phẩm</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,101 +14,75 @@
                 <span class="icon">🔔</span>
                 <span>Khuyến mãi</span>
                 <span class="text-top">30/4-1/5 hấp dẫn nhất mùa hè này</span>
-                <span>KHÔNG THỂ Ỏ BỎ LỠ</span>
+                <span>KHÔNG THỂ BỎ LỠ</span>
             </div>
             <div class="top-right">
                 <div class="icon-right">💬</div>
                 <div class="top-right-text">
-                <h2>Tư vấn khách hàng</h2>
-                <p>1900 6750</p>
-            </div>
+                    <h2>Tư vấn khách hàng</h2>
+                    <p>1900 6750</p>
+                </div>
             </div>
         </div>
+
         <div class="header-center">
             <div class="header-center-left">
                 <div class="logo">
                     <div class="logo-text">
                         <h2>SUDES NEST</h2>
-                        <p>Yên sào Khánh Hòa cao cấp</p>
+                        <p>Yến sào Khánh Hòa cao cấp</p>
                     </div>
                     <div class="logo-image">
-                        <img src="logo.jfif" alt="1">
+                        <img src="logo.jfif" alt="Logo">
                     </div>
                 </div>
             </div>
+
             <div class="header-center-center">
                 <div class="search">
                     <div class="search-bar">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm..." oninput="handleSearch()">
                     </div>
                     <div class="search-btn">
                         <button>🔍</button>
                     </div>
                 </div>
             </div>
+
             <div class="header-center-right">
                 <div class="menu-top">
                     <div class="menu-top-item">
-                        <a href="#">📍</a>
-                        <a href="#">Cửa hàng</a>
+                        <a href="#">📍 <span>Cửa hàng</span></a>
                     </div>
                     <div class="menu-top-item">
-                        <a href="#">🤍</a>
-                        <a href="#">Yêu thích</a>
+                        <a href="#">🤍 <span>Yêu thích</span></a>
                         <span class="badge">0</span>
                     </div>
                     <div class="menu-top-item">
-                        <a href="acc.html">🙍‍♂️</a>
-                        <a href="acc.html">Tài khoản</a>
+                        <a href="acc.html">🙍‍♂️ <span>Tài khoản</span></a>
                     </div>
                     <div class="menu-top-item">
-                        <a href="#">🛒</a>
-                        <a href="#">Giỏ hàng</a>
+                        <a href="#">🛒 <span>Giỏ hàng</span></a>
                         <span class="badge">0</span>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="header-bottom">
             <div class="menu-left">
                 <form class="dropdown">
                     <select>
                         <option value="1">≡ DANH MỤC SẢN PHẨM</option>
-                        <option value="1">1</option>
-                        <option value="1">1</option>
                     </select>
                 </form>
             </div>
             <div class="menu-center">
-                <nav class="menu-item">
-                    <a href="#">Trang chủ</a>
-                </nav>
-                 <nav class="menu-item">
-                    <a href="#">Giới thiệu</a>
-                </nav>
-               <nav class="category">
-                <a href="#">Sản Phẩm</a>
-                <ul>
-                    <li>ggg</li>
-                    <li>ggg</li>
-                    <li>ggg</li>
-                </ul>
-               </nav>
-                <form class="dropdown-item">
-                    <select>
-                        <option value="1">Tin tức</option>
-                        <option value="1">1</option>
-                    </select>
-                </form>
-                <form class="dropdown-item">
-                    <select>
-                        <option value="1">Chính sách</option>
-                        <option value="1">1</option>
-                    </select>
-                </form>
-                 <nav class="menu-item">
-                    <a href="#">Liên hệ</a>
-                </nav>
+                <nav class="menu-item"><a href="#">Trang chủ</a></nav>
+                <nav class="menu-item"><a href="#">Giới thiệu</a></nav>
+                <nav class="category"><a href="#">Sản Phẩm</a></nav>
+                <nav class="menu-item"><a href="#">Tin tức</a></nav>
+                <nav class="menu-item"><a href="#">Liên hệ</a></nav>
             </div>
             <div class="menu-right">
                 <div class="hotdeal-section">
@@ -118,109 +92,147 @@
             </div>
         </div>
     </header>
-   <main>
-    <div class="main-image">
-        <img src="9c268519-d5b7-4d10-8c64-4b575dba5fb3.jfif" class="slide active" alt="2">
-        <img src="b68c04df-f82d-444f-ba75-101a6334adf7.jfif" class="slide" alt="2">
-    </div>
 
-    <div class="crud-container">
-        <div class="crud-card">
-            <h3 class="crud-title">🛠️ BẢNG ĐIỀU KHIỂN SẢN PHẨM (CRUD)</h3>
-            
-            <div class="crud-form">
-                <input type="hidden" id="crud-id">
-                <input type="text" id="crud-name" placeholder="Tên loại yến...">
-                <input type="number" id="crud-price" placeholder="Giá tiền (VNĐ)...">
-                <div class="crud-btns">
-                    <button id="btn-save" onclick="handleSave()">LƯU SẢN PHẨM</button>
-                    <button id="btn-clear" onclick="clearForm()" style="background:#666;">HỦY</button>
+    <main>
+        <div class="main-image">
+            <img src="9c268519-d5b7-4d10-8c64-4b575dba5fb3.jfif" class="slide active" alt="Banner 1">
+            <img src="b68c04df-f82d-444f-ba75-101a6334adf7.jfif" class="slide" alt="Banner 2">
+        </div>
+
+        <div class="crud-container">
+            <div class="crud-card">
+                <h3 class="crud-title">🛠️ QUẢN LÝ KHO YẾN SÀO</h3>
+                
+                <div class="crud-form">
+                    <input type="hidden" id="crud-id">
+                    <input type="text" id="crud-name" placeholder="Tên loại yến...">
+                    <input type="number" id="crud-price" placeholder="Giá tiền (VNĐ)...">
+                    <div class="crud-btns">
+                        <button id="btn-save" onclick="handleSave()">LƯU SẢN PHẨM</button>
+                        <button id="btn-clear" onclick="clearForm()" style="background:#666; color:white; border:none; padding:10px 20px; border-radius:4px; cursor:pointer;">HỦY</button>
+                    </div>
+                </div>
+
+                <div class="crud-table-wrapper">
+                    <table class="crud-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Giá Niêm Yết</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crud-table-body">
+                            </tbody>
+                    </table>
                 </div>
             </div>
-
-            <table class="crud-table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Tên Sản Phẩm</th>
-                        <th>Giá</th>
-                        <th>Thao tác</th>
-                    </tr>
-                </thead>
-                <tbody id="crud-table-body">
-                    </tbody>
-            </table>
         </div>
-    </div>
-</main>
+    </main>
+
     <script>
+        const STORAGE_KEY = "SUDES_NEST_PRODUCTS";
 
+        // 1. Hàm vẽ bảng (Hiển thị dữ liệu)
+        function renderTable(productsToDisplay) {
+            const body = document.getElementById('crud-table-body');
+            if (productsToDisplay.length === 0) {
+                body.innerHTML = '<tr><td colspan="4" style="text-align:center;">Không tìm thấy sản phẩm nào</td></tr>';
+                return;
+            }
 
-const STORAGE_KEY = "SUDES_NEST_PRODUCTS";
+            body.innerHTML = productsToDisplay.map((p, index) => `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${p.name}</td>
+                    <td>${Number(p.price).toLocaleString()}đ</td>
+                    <td>
+                        <button class="btn-edit-tool" onclick="editProduct(${index})" style="color: blue; cursor:pointer; margin-right:10px; border:none; background:none;">Sửa</button>
+                        <button class="btn-delete-tool" onclick="deleteProduct(${index})" style="color: red; cursor:pointer; border:none; background:none;">Xóa</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
 
+        // 2. Tải dữ liệu ban đầu
+        function loadProducts() {
+            const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+            renderTable(products);
+        }
 
-function loadProducts() {
-    const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    const body = document.getElementById('crud-table-body');
-    body.innerHTML = products.map((p, index) => `
-        <tr>
-            <td>${index + 1}</td>
-            <td>${p.name}</td>
-            <td>${Number(p.price).toLocaleString()}đ</td>
-            <td>
-                <button class="btn-edit-tool" onclick="editProduct(${index})">Sửa</button>
-                <button class="btn-delete-tool" onclick="deleteProduct(${index})">Xóa</button>
-            </td>
-        </tr>
-    `).join('');
-}
+        // 3. CHỨC NĂNG TÌM KIẾM (Search)
+        function handleSearch() {
+            const keyword = document.getElementById('search-input').value.toLowerCase();
+            const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+            const filtered = products.filter(p => p.name.toLowerCase().includes(keyword));
+            renderTable(filtered);
+        }
 
-function handleSave() {
-    const id = document.getElementById('crud-id').value; 
-    const name = document.getElementById('crud-name').value;
-    const price = document.getElementById('crud-price').value;
+        // 4. CHỨC NĂNG LƯU (Create & Update + Kiểm thử biên)
+        function handleSave() {
+            const id = document.getElementById('crud-id').value; 
+            const name = document.getElementById('crud-name').value.trim();
+            const price = parseFloat(document.getElementById('crud-price').value);
 
-    if (!name || !price) return alert("Vui lòng điền đủ thông tin!");
+            // Kiểm thử lớp tương đương & Giá trị biên
+            if (!name || isNaN(price)) {
+                return alert("Vui lòng nhập đầy đủ Tên và Giá!");
+            }
+            if (price <= 0) {
+                return alert("Lỗi: Giá sản phẩm phải lớn hơn 0!");
+            }
+            if (price > 100000000) {
+                return alert("Lỗi: Giá vượt quá giới hạn cho phép (100 triệu)!");
+            }
 
-    let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+            let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 
-    if (id !== "") {
-        products[id] = { name, price };
-    } else {
-        products.push({ name, price });
-    }
+            if (id !== "") {
+                // Chế độ Sửa (Update)
+                products[id] = { name, price };
+                alert("Cập nhật thành công!");
+            } else {
+                // Chế độ Thêm mới (Create)
+                products.push({ name, price });
+                alert("Thêm sản phẩm thành công!");
+            }
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
-    clearForm();
-    loadProducts();
-}
-function deleteProduct(index) {
-    if(confirm("Xác nhận xóa sản phẩm này?")) {
-        let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-        products.splice(index, 1);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
-        loadProducts();
-    }
-}
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+            clearForm();
+            loadProducts();
+        }
 
-function editProduct(index) {
-    let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    const p = products[index];
-    document.getElementById('crud-id').value = index;
-    document.getElementById('crud-name').value = p.name;
-    document.getElementById('crud-price').value = p.price;
-    document.getElementById('btn-save').innerText = "CẬP NHẬT";
-}
+        // 5. CHỨC NĂNG XÓA (Delete + Kiểm thử biên)
+        function deleteProduct(index) {
+            if(confirm("Bạn có chắc chắn muốn xóa sản phẩm này không?")) {
+                let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+                products.splice(index, 1);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+                loadProducts();
+            }
+        }
 
-function clearForm() {
-    document.getElementById('crud-id').value = '';
-    document.getElementById('crud-name').value = '';
-    document.getElementById('crud-price').value = '';
-    document.getElementById('btn-save').innerText = "LƯU SẢN PHẨM";
-}
+        // 6. CHỨC NĂNG SỬA (Đổ dữ liệu ngược lại form)
+        function editProduct(index) {
+            let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+            const p = products[index];
+            document.getElementById('crud-id').value = index;
+            document.getElementById('crud-name').value = p.name;
+            document.getElementById('crud-price').value = p.price;
+            document.getElementById('btn-save').innerText = "CẬP NHẬT NGAY";
+            document.getElementById('crud-name').focus();
+        }
 
-window.addEventListener('DOMContentLoaded', loadProducts);
-</script>
+        // 7. Reset Form
+        function clearForm() {
+            document.getElementById('crud-id').value = '';
+            document.getElementById('crud-name').value = '';
+            document.getElementById('crud-price').value = '';
+            document.getElementById('btn-save').innerText = "LƯU SẢN PHẨM";
+        }
 
+        
+    </script>
 </body>
 </html>

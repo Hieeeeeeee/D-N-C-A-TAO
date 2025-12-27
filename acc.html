@@ -10,7 +10,7 @@
 
     <div class="form-container">
         <h2>ĐĂNG NHẬP</h2>
-        <input type="email" id="email" placeholder="Email / Số điện thoại">
+        <input type="text" id="username" placeholder="Tên đăng nhập (trên 6 ký tự)" spellcheck="false">
         <input type="password" id="password" placeholder="Mật khẩu (6-12 ký tự)">
         
         <button type="button" id="loginBtn">ĐĂNG NHẬP</button>
@@ -20,30 +20,41 @@
 
     <script>
         const loginBtn = document.getElementById('loginBtn');
-        const emailInput = document.getElementById('email');
+        const userInput = document.getElementById('username'); // Đã sửa khớp ID
         const passInput = document.getElementById('password');
 
         loginBtn.addEventListener('click', function() {
-            const emailValue = emailInput.value.trim();
+            const userValue = userInput.value.trim();
             const passValue = passInput.value.trim();
 
-            if (emailValue === "" || passValue === "") {
+            // 1. Kiểm tra bỏ trống
+            if (userValue === "" || passValue === "") {
                 alert("Không được để trống dữ liệu!");
                 return;
             }
-            if (passValue.length < 6) {
-                alert("Mật khẩu quá ngắn (dưới 6 ký tự)!");
-                return;
-            } 
-            if (passValue.length > 12) {
-                alert("Mật khẩu quá dài (vượt 12 ký tự)!");
+
+            // 2. Kiểm tra Username: 
+            // Không dấu, không khoảng trắng, không ký tự đặc biệt, trên 6 ký tự ({7,} nghĩa là từ 7 trở lên)
+            const usernameRegex = /^[a-zA-Z0-9]{7,}$/;
+
+            if (!usernameRegex.test(userValue)) {
+                alert("Tên đăng nhập phải trên 6 ký tự, không dấu, không viết cách và không có ký tự đặc biệt!");
                 return;
             }
-            if (emailValue === "taodangcap@gmail.com" && passValue === "123456") {
+
+            // 3. Kiểm tra Mật khẩu (6-12 ký tự)
+            if (passValue.length < 6 || passValue.length > 12) {
+                alert("Mật khẩu phải từ 6 đến 12 ký tự!");
+                return;
+            }
+
+            // 4. Kiểm tra tài khoản mẫu
+            // Thử nhập đúng: admin123 và mật khẩu: 123456
+            if (userValue === "admin123" && passValue === "123456") {
                 alert("Đăng nhập thành công!");
                 window.location.href = "index.html";
             } else {
-                alert("Đăng nhập thất bại!");
+                alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
             }
         });
     </script>
